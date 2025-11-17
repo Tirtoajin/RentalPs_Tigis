@@ -21,7 +21,7 @@
 <p class="has-line-data" data-line-start="20" data-line-end="21">Pondasi dari aplikasi ini:</p>
 <h5 class="code-line" data-line-start=21 data-line-end=22 ><a id="Backend_21"></a>Backend</h5>
 <ul>
-<li class="has-line-data" data-line-start="22" data-line-end="23">PHP 8.2: Versi terbaru dari bahasa pemrograman PHP yang menjadi dasar dari Laravel.</li>
+<li class="has-line-data" data-line-start="22" data-line-end="23">PHP 8.2.</li>
 <li class="has-line-data" data-line-start="23" data-line-end="24">Laravel 12: Framework PHP modern yang kuat untuk membangun aplikasi web. Menangani semua logika bisnis, routing, dan interaksi database.</li>
 <li class="has-line-data" data-line-start="24" data-line-end="25">MySQL: Sistem manajemen database untuk menyimpan semua data aplikasi, mulai dari data pengguna, konsol, booking, hingga testimoni.</li>
 </ul>
