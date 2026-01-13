@@ -152,6 +152,8 @@ https://xxxx.ngrok-free.app/api/midtrans-callback
 
 Status transaksi dan booking akan otomatis diperbarui setelah simulasi pembayaran berhasil.
 
+---
+
 ## 📸 Dokumentasi Aplikasi
 
 ### Landing Page
