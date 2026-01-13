@@ -1,5 +1,7 @@
 <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Website_Rental_PlayStation_0"></a>Website Rental PlayStation</h1>
-<p class="has-line-data" data-line-start="1" data-line-end="2">Aplikasi web full-stack yang dirancang untuk menyediakan solusi manajemen lengkap bagi bisnis rental konsol. Proyek ini berfungsi sebagai demonstrasi penerapan alur kerja web modern dan implementasi fitur-fitur kompleks, mencakup sistem booking real-time, autentikasi pengguna berbasis peran (Admin &amp; Pelanggan), hingga integrasi payment gateway. Aplikasi ini dibangun untuk portofolio.</p>
+<p class="has-line-data" data-line-start="1" data-line-end="2">Website <b>Rental PlayStation</b> adalah aplikasi web <b>full-stack</b>yang dikembangkan sebagai proyek <b>portfolio Web Developer</b>. Aplikasi ini berfokus pada penerapan arsitektur <b>Laravel</b>, manajemen <b>booking real-time</b>, serta integrasi <b>sistem pembayaran</b> untuk kebutuhan bisnis rental konsol.
+
+Proyek ini menekankan aspek teknis seperti pemisahan peran pengguna, sinkronisasi data ketersediaan unit secara real-time, komunikasi client–server yang efisien, serta pengelolaan transaksi dan notifikasi dalam satu sistem terintegrasi..</p>
 <h1 class="code-line" data-line-start=3 data-line-end=4 ><a id="Fitur_Utama_3"></a>Fitur Utama</h1>
 <ul>
 <li class="has-line-data" data-line-start="4" data-line-end="5">Landing Page: Halaman depan dinamis yang menampilkan status unit secara real-time.</li>
@@ -38,3 +40,181 @@
 <li class="has-line-data" data-line-start="33" data-line-end="34">Midtrans (Sandbox): Payment gateway populer di Indonesia yang diintegrasikan untuk menangani alur pembayaran online. Mode Sandbox digunakan untuk simulasi transaksi.</li>
 <li class="has-line-data" data-line-start="34" data-line-end="35">Ngrok: Layanan tunneling yang digunakan selama pengembangan untuk mengekspos server lokal ke internet, memungkinkan pengujian webhook dari Midtrans.</li>
 </ul>
+
+# Setup & Installation
+
+Pastikan perangkat lunak berikut telah terinstal:
+
+* XAMPP (Apache & MySQL)
+* Composer
+* Node.js & NPM
+* Git
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/username/nama-repo.git
+cd nama-repo
+```
+
+### 2. Install Dependency
+
+```bash
+composer install
+npm install
+```
+
+### 3. Konfigurasi Environment
+
+Salin file environment:
+
+```bash
+cp .env.example .env
+```
+
+Atur konfigurasi database pada file `.env`:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nama_database_anda
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+Tambahkan konfigurasi **Midtrans Sandbox**:
+
+```env
+MIDTRANS_MERCHANT_ID=isi_merchant_id
+MIDTRANS_CLIENT_KEY=isi_client_key
+MIDTRANS_SERVER_KEY=isi_server_key
+MIDTRANS_IS_PRODUCTION=false
+```
+
+### 4. Generate Key & Storage
+
+```bash
+php artisan key:generate
+php artisan storage:link
+```
+
+### 5. Migrasi & Seeding Database
+
+```bash
+php artisan migrate --seed
+```
+
+### 6. Jalankan Aplikasi
+
+Gunakan dua terminal:
+
+**Terminal Laravel**
+
+```bash
+php artisan serve
+```
+
+**Terminal Vite**
+
+```bash
+npm run dev
+```
+
+Akses aplikasi melalui browser:
+
+```
+http://127.0.0.1:8000
+```
+
+---
+
+##  Midtrans Webhook (Local Testing)
+
+Untuk menerima callback pembayaran Midtrans di lingkungan lokal:
+
+1. Jalankan **Ngrok**
+
+```bash
+ngrok http 8000
+```
+
+2. Salin URL HTTPS yang dihasilkan
+3. Masuk ke **Dashboard Midtrans Sandbox**
+4. Buka **Settings > Configuration**
+5. Isi **Notification URL**:
+
+```
+https://xxxx.ngrok-free.app/api/midtrans-callback
+```
+
+6. Simpan konfigurasi
+
+Status transaksi dan booking akan otomatis diperbarui setelah simulasi pembayaran berhasil.
+
+## 📸 Dokumentasi Aplikasi
+
+### Landing Page
+Menampilkan status unit PlayStation secara real-time dan countdown waktu sewa.
+
+![Landing Page](tigis%20rent/landing%20page.png)
+
+---
+
+### User Area
+
+#### Dashboard User
+Ringkasan untuk melihat denah konsol .
+
+![Dashboard User](tigis%20rent/user/dashboard%20user.png)
+
+#### Booking Baru
+Halaman pemesanan unit dengan validasi real-time untuk mencegah double booking.
+
+![Booking Baru](tigis%20rent/user/booking%20baru.png)
+
+#### Riwayat Transaksi
+Menampilkan histori pembayaran dan status booking.
+
+![Riwayat Transaksi](tigis%20rent/user/riwayat%20transaksi.png)
+![Riwayat Transaksi](tigis%20rent/user/transaksiuser.jpeg)
+#### Profil User
+Manajemen data akun pengguna.
+
+![Profil User](tigis%20rent/user/profil%20user.png)
+
+---
+### Admin Area
+
+#### Dashboard Admin
+Monitoring ringkasan sistem, pendapatan, dan aktivitas booking.
+
+![Dashboard Admin](tigis%20rent/admin/dasboard%20admin.png)
+
+
+#### Manajemen Konsol
+Daftar dan pengelolaan unit PlayStation.
+
+![Manajemen Konsol](tigis%20rent/admin/manajemen%20konsol.png)
+
+#### Tambah Konsol
+Form penambahan unit konsol baru ke sistem.
+
+![Tambah Konsol](tigis%20rent/admin/manajemen%20konsol%20-%20tambah%20konsol.png)
+
+#### Manajemen Booking
+Pengelolaan data booking user dan status transaksi.
+
+![Manajemen Booking](tigis%20rent/admin/manajemen%20booking.png)
+
+#### Manajemen Testimoni
+Pengelolaan testimoni pelanggan.
+
+![Manajemen Testimoni](tigis%20rent/admin/manajemen%20testimoni.png)
+
+#### Profil Admin
+Manajemen data akun admin.
+
+![Profil Admin](tigis%20rent/admin/profile%20admin.png)
+
+
