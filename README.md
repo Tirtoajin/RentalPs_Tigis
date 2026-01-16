@@ -1,7 +1,7 @@
 <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Website_Rental_PlayStation_0"></a>Website Rental PlayStation</h1>
 <p class="has-line-data" data-line-start="1" data-line-end="2">Website <b>Rental PlayStation</b> adalah aplikasi web <b>full-stack</b>yang dikembangkan sebagai proyek <b>portfolio Web Developer</b>. Aplikasi ini berfokus pada penerapan arsitektur <b>Laravel</b>, manajemen <b>booking real-time</b>, serta integrasi <b>sistem pembayaran</b> untuk kebutuhan bisnis rental konsol.
 
-Proyek ini menekankan aspek teknis seperti pemisahan peran pengguna, sinkronisasi data ketersediaan unit secara real-time, komunikasi client–server yang efisien, serta pengelolaan transaksi dan notifikasi dalam satu sistem terintegrasi..</p>
+Proyek ini menekankan aspek teknis seperti pemisahan peran pengguna, sinkronisasi data ketersediaan unit secara real-time, komunikasi client–server yang efisien, serta pengelolaan transaksi dan notifikasi dalam satu sistem terintegrasi.</p>
 <h1 class="code-line" data-line-start=3 data-line-end=4 ><a id="Fitur_Utama_3"></a>Fitur Utama</h1>
 <ul>
 <li class="has-line-data" data-line-start="4" data-line-end="5">Landing Page: Halaman depan dinamis yang menampilkan status unit secara real-time.</li>
