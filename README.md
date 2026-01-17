@@ -41,6 +41,14 @@ Proyek ini menekankan aspek teknis seperti pemisahan peran pengguna, sinkronisas
 <li class="has-line-data" data-line-start="34" data-line-end="35">Ngrok: Layanan tunneling yang digunakan selama pengembangan untuk mengekspos server lokal ke internet, memungkinkan pengujian webhook dari Midtrans.</li>
 </ul>
 
+# ERD & Flowchart
+![erd](https://github.com/user-attachments/assets/50cef545-8501-4fb1-89bf-3ab61c6f878b)
+
+<img width="2505" height="1524" alt="diagram-export-1-17-2026-1_27_35-PM" src="https://github.com/user-attachments/assets/dbafe094-35c8-4b62-bafc-b61539d011aa" />
+
+
+
+
 # Setup & Installation
 
 Pastikan perangkat lunak berikut telah terinstal:
